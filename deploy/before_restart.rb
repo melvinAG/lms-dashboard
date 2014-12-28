@@ -1,1 +1,0 @@
-run "cd srv/www/lms-dashboard/current && /usr/local/bin/bundle exec rake assets:precompile"
