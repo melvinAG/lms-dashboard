@@ -6,7 +6,5 @@ class CreateEnrollments < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_index :enrollments, user_id
-    add_index :enrollments, section_id
   end
 end
