@@ -15,6 +15,7 @@ gem 'sdoc',                 '0.4.0', group: :doc
 gem 'aws-sdk'
 gem 'therubyracer'
 gem 'bootstrap-sass',       '3.2.0.0'
+gem 'pg',             '0.17.1'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
@@ -30,7 +31,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg',             '0.17.1'
+
   gem 'rails_12factor', '0.0.2'
   gem 'unicorn',        '4.8.3'
 end
