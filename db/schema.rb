@@ -20,9 +20,11 @@ ActiveRecord::Schema.define(version: 20141228231527) do
     t.datetime "updated_at", null: false
   end
 
+  add_index "enrollments", ["section_id"], name: "index_enrollments_on_section_id"
+  add_index "enrollments", ["user_id"], name: "index_enrollments_on_user_id"
+
   create_table "sections", force: true do |t|
     t.text     "class_name"
-    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
