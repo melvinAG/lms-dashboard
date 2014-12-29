@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
-root 'static_pages/home'
-get 'static_pages/home'
-get 'static_pages/help'
-get 'signup' => 'users#new'
+  root                'sessions#new'
+  get    'help'    => 'static_pages#help'
+  get    'about'   => 'static_pages#about'
+  get    'contact' => 'static_pages#contact'
+  get    'signup'  => 'users#new'
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
 
   resources :enrollments
 
@@ -65,4 +69,5 @@ get 'signup' => 'users#new'
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end

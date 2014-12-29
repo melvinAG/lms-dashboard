@@ -10,7 +10,7 @@
       </button>
       <%= link_to image_tag("ALU_logo1.png", alt: "ALU"), root_path %>
     </div>
-
+<% if logged_in? %>
     <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
@@ -28,5 +28,7 @@
         </li>
       </ul>
     </div>
+<% else %>
+<% end %>
   </div><!-- /.container-fluid -->
 </nav><! -- End nav -->
