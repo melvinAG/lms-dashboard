@@ -1,14 +1,58 @@
+<% provide(:title, 'My Dashboard') %>
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <h1>My Dashboard</h1>
+  </div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">Chart 1</div>
+    <div class="col-md-4">Chart 2</div>
+    <div class="col-md-4">Chart 3</div>
+  </div>
+</div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<div class="container">
+<div class="row">
+<table class="table table-striped">
+  <thead>
+    <tr>
+    <th>Course Name</th>
+    <th>Instructor</th>
+    <th>Overall Faculty Assessment</th>
+    <th>Overall Assignment Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Data and Decisions</td>
+      <td>Melvin Freeman</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Professional Communications</td>
+      <td>Nate Giraldi</td>
+      <td>4</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Projects</td>
+      <td>Thomas Hay</td>
+      <td>1</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Entrpreneurial Leadership</td>
+      <td>Chris Campion</td>
+      <td>4</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= render 'layouts/userjavascript' %>
