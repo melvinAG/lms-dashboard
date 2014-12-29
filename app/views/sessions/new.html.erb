@@ -7,10 +7,7 @@
     <%= form_for(:session, url: login_path) do |f| %>
       <%= f.text_field :email, class: 'form-control', placeholder: 'Email Address' %>
       <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
-      <%= f.label :remember_me, class: "checkbox inline" do %>
-      <%= f.check_box :remember_me %>
-      Remember me on this computer
-      <% end %>
+      </br>
       <%= f.submit "Log in", class: "btn btn-primary btn-block" %>
     <% end %>
     <p>New User? <%= link_to 'Sign up here!', signup_path %></p>
